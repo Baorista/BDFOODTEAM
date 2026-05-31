@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/productListFragment">
+
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.example.khoga.ui.fragment.ProductListFragment"
+        android:label="Trang chủ"
+        tools:layout="@layout/fragment_product_list">
+
+        <action
+            android:id="@+id/action_list_to_detail"
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.example.khoga.ui.fragment.ProductDetailFragment"
+        android:label="Chi tiết sản phẩm"
+        tools:layout="@layout/fragment_product_detail">
+
+        <argument
+            android:name="productId"
+            app:argType="string"
+            android:defaultValue=""/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.khoga.ui.fragment.CartFragment"
+        android:label="Giỏ hàng"
+        tools:layout="@layout/fragment_cart" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.khoga.ui.fragment.ProfileFragment"
+        android:label="Hồ sơ"
+        tools:layout="@layout/fragment_profile" />
+
+    <!-- Wishlist Fragment -->
+    <fragment
+        android:id="@+id/wishlistFragment"
+        android:name="com.example.khoga.ui.fragment.WishlistFragment"
+        android:label="Sản phẩm yêu thích"
+        tools:layout="@layout/fragment_wishlist">
+
+        <!-- Từ Wishlist → chi tiết sản phẩm -->
+        <action
+            android:id="@+id/action_wishlist_to_detail"
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <!-- Order List Fragment (Lịch sử mua hàng) -->
+    <fragment
+        android:id="@+id/orderListFragment"
+        android:name="com.example.khoga.ui.fragment.OrderListFragment"
+        android:label="Lịch sử mua hàng"
+        tools:layout="@layout/fragment_order_list" />
+
+    <!-- Chat Fragment -->
+    <fragment
+         android:id="@+id/chatFragment"
+         android:name="com.example.khoga.ui.fragment.ChatFragment"
+         android:label="AI"
+         tools:layout="@layout/fragment_chat">
+
+        <action
+            android:id="@+id/action_chat_to_detail"
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <!-- Global actions -->
+    <action
+        android:id="@+id/action_global_chat"
+        app:destination="@id/chatFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:launchSingleTop="true"/>
+
+    <action
+        android:id="@+id/action_global_cart"
+        app:destination="@id/cartFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:launchSingleTop="true"/>
+
+    <action
+        android:id="@+id/action_global_profile"
+        app:destination="@id/profileFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:launchSingleTop="true"/>
+
+    <action
+        android:id="@+id/action_global_wishlist"
+        app:destination="@id/wishlistFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:launchSingleTop="true"/>
+
+    <action
+        android:id="@+id/action_global_orderList"
+        app:destination="@id/orderListFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:launchSingleTop="true"/>
+
+</navigation>

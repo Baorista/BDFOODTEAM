@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="Giỏ hàng của tôi"
+            android:textColor="#2E2836"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:nestedScrollingEnabled="false" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edtDiscountCode"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edittext_rounded"
+                android:hint="Nhập mã giảm giá"
+                android:paddingHorizontal="20dp"
+                android:textSize="14sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnApplyDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:backgroundTint="#5A4B75"
+                android:text="Áp dụng"
+                android:textAllCaps="false"
+                app:cornerRadius="24dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Tổng tiền giỏ hàng"
+            android:textColor="#5A4B75"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Tổng tiền" android:textColor="#555555" />
+                    <TextView android:id="@+id/tvSubtotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="690.000đ" android:textColor="#333333" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Giảm giá" android:textColor="#555555" />
+                    <TextView android:id="@+id/tvDiscount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0đ" android:textColor="#333333" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Phí dịch vụ" android:textColor="#555555" />
+                    <TextView android:id="@+id/tvVAT" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10.000đ" android:textColor="#333333" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Thành tiền" android:textColor="#333333" />
+                    <TextView android:id="@+id/tvFinalTotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="700.000đ" android:textColor="#333333" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCheckout"
+            android:layout_width="160dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#5A4B75"
+            android:text="Checkout"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:cornerRadius="27dp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

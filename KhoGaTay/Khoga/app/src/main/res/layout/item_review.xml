@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- item_review.xml - Mỗi đánh giá trong danh sách (Product Detail) -->
+<!--
+    Theo Figma:
+    [Avatar]  Nguyễn Kim Bảo
+              2026-02-01 03:36  ★★★★★
+              Cũng ngon
+              [ảnh1] [ảnh2]
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="14dp"
+    android:paddingHorizontal="16dp">
+
+    <!-- Avatar tròn -->
+    <ImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/ic_default_avatar" />
+
+    <!-- Nội dung đánh giá -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Tên user -->
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nguyễn Kim Bảo"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- Dòng 2: Ngày + Sao -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2026-02-01 03:36"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+            <!-- Container cho 5 ngôi sao nhỏ -->
+            <LinearLayout
+                android:id="@+id/layoutStarsSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" />
+        </LinearLayout>
+
+        <!-- Comment -->
+        <TextView
+            android:id="@+id/tvComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Cũng ngon"
+            android:textColor="#555555"
+            android:textSize="13sp" />
+
+        <!-- Ảnh đánh giá (nếu có) -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvReviewImages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

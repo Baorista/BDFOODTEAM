@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- item_chat_product.xml — Card sản phẩm gợi ý trong chat (theo Figma) -->
+<!--
+    Figma shows:
+    ┌─────────────────────────────┐
+    │  [Product Image]            │
+    │  Khô gà MixiFood           │
+    │  670.000đ            [🛒]  │
+    └─────────────────────────────┘
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="4dp"
+    android:paddingStart="4dp"
+    android:paddingEnd="60dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardChatProduct"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="1dp"
+        app:strokeColor="@color/divider"
+        app:strokeWidth="0.5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Ảnh sản phẩm -->
+            <ImageView
+                android:id="@+id/imgChatProduct"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:scaleType="centerCrop" />
+
+            <!-- Tên + Giá + Cart icon -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tvChatProductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Tên sản phẩm"
+                    android:textColor="@color/text_primary"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvChatProductPrice"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="670.000đ"
+                        android:textColor="@color/secondary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <!-- Icon giỏ hàng (theo Figma) -->
+                    <ImageButton
+                        android:id="@+id/btnChatAddToCart"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Thêm vào giỏ"
+                        android:src="@drawable/ic_cart_outline"
+                        app:tint="@color/text_secondary" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</FrameLayout>

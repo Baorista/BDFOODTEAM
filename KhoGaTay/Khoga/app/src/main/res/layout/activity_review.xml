@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingHorizontal="16dp">
+
+        <LinearLayout
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingEnd="16dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_back"
+                app:tint="#333333" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Quay lại"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Review"
+            android:textColor="#333333"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSubmitOrder"
+        android:layout_below="@+id/layoutHeader">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Chi tiết địa chỉ giao hàng"
+                android:textColor="#5A4B75"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvReviewName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Họ và tên: "
+                android:textColor="#333333"
+                android:textSize="15sp"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/tvReviewPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Số điện thoại: "
+                android:textColor="#333333"
+                android:textSize="15sp"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/tvReviewAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Địa chỉ: "
+                android:textColor="#333333"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Chi tiết đơn hàng"
+                android:textColor="#5A4B75"
+                android:textSize="16sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="3dp"
+                app:contentPadding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Tổng tiền" android:textColor="#555555" android:textSize="14sp"/>
+                        <TextView android:id="@+id/tvReviewSubtotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="700.000đ" android:textColor="#333333" android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Shipping" android:textColor="#555555" android:textSize="14sp"/>
+                        <TextView android:id="@+id/tvReviewShipping" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tiêu chuẩn - Miễn phí" android:textColor="#333333" android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Phương thức thanh toán" android:textColor="#555555" android:textSize="14sp"/>
+                        <TextView android:id="@+id/tvReviewPayment" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="COD" android:textColor="#333333" android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Thành tiền" android:textColor="#555555" android:textSize="15sp"/>
+                        <TextView android:id="@+id/tvReviewFinalTotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="700.000đ" android:textColor="#333333" android:textSize="15sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmitOrder"
+        android:layout_width="160dp"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#5A4B75"
+        android:text="Tiếp tục"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:cornerRadius="27dp" />
+
+</RelativeLayout>

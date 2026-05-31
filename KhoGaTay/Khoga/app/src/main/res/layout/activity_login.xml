@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:gravity="center_vertical"
+    android:background="@color/surface">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BDfood"
+        android:textSize="28sp"
+        android:fontFamily="@font/nunito"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        android:gravity="center"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đăng nhập tài khoản"
+        android:textSize="14sp"
+        android:fontFamily="@font/nunito"
+        android:textColor="@color/text_hint"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_edittext_rounded"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginBottom="14dp"
+        android:fontFamily="@font/nunito"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_hint" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_edittext_rounded"
+        android:hint="Mật khẩu"
+        android:inputType="textPassword"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/nunito"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_hint" />
+
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quên mật khẩu?"
+        android:textSize="13sp"
+        android:fontFamily="@font/nunito"
+        android:textColor="@color/primary"
+        android:gravity="end"
+        android:layout_marginBottom="28dp"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Đăng nhập"
+        android:textAllCaps="false"
+        android:fontFamily="@font/nunito"
+        android:textSize="16sp"
+        app:cornerRadius="25dp"
+        app:backgroundTint="@color/primary"
+        android:layout_marginBottom="14dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/tvRegister"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Tạo tài khoản mới"
+        android:textAllCaps="false"
+        android:fontFamily="@font/nunito"
+        android:textSize="16sp"
+        android:textColor="@color/primary"
+        app:cornerRadius="25dp"
+        app:strokeColor="@color/primary" />
+
+</LinearLayout>

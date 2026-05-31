@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp">
+
+            <ImageView
+                android:id="@+id/imgProduct"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_bg"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/btnHeart"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_badge_default"
+                android:padding="6dp"
+                android:src="@drawable/ic_heart_active"
+                app:tint="@android:color/white" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tên sản phẩm"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"
+                android:textColor="@color/text_primary"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_marginBottom="6dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvProductPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="0đ"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/nunito"
+                    android:textStyle="bold"
+                    android:textColor="@color/secondary" />
+
+                <ImageView
+                    android:id="@+id/btnAddToCart"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_cart"
+                    app:tint="@color/text_muted" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

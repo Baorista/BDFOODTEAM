@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- fragment_chat.xml — Giao diện chatbot theo Figma -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECECEC"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+    <!-- ============================================ -->
+    <!-- HEADER: Nền tím, avatar + tên ChatBot        -->
+    <!-- ============================================ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/primary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <!-- Avatar chatbot -->
+        <ImageView
+            android:id="@+id/imgChatBotAvatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:text="ChatBot"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnNewChat"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Cuộc trò chuyện mới"
+            android:padding="6dp"
+            android:src="@drawable/ic_edit"
+            app:tint="@android:color/white" />
+    </LinearLayout>
+
+    <!-- ============================================ -->
+    <!-- CHAT MESSAGES                                 -->
+    <!-- ============================================ -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:padding="12dp" />
+
+    <!-- ============================================ -->
+    <!-- TYPING INDICATOR (ẩn mặc định)               -->
+    <!-- ============================================ -->
+    <LinearLayout
+        android:id="@+id/layoutTyping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/bg_chat_assistant"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/dot1"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/bg_dot_gray" />
+
+        <View
+            android:id="@+id/dot2"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/bg_dot_gray" />
+
+        <View
+            android:id="@+id/dot3"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/bg_dot_gray" />
+    </LinearLayout>
+
+    <!-- ============================================ -->
+    <!-- SUGGESTION CHIPS                              -->
+    <!-- ============================================ -->
+    <HorizontalScrollView
+        android:id="@+id/scrollChips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="6dp"
+        android:scrollbars="none">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleLine="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipSuggest"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gợi ý sản phẩm cho tôi"
+                android:textSize="12sp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipHot"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sản phẩm đang hot"
+                android:textSize="12sp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipGift"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tư vấn quà tặng"
+                android:textSize="12sp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipOrder"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Theo dõi đơn hàng"
+                android:textSize="12sp" />
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <!-- ============================================ -->
+    <!-- INPUT BAR: EditText + Nút gửi                -->
+    <!-- ============================================ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp">
+
+        <EditText
+            android:id="@+id/edtMessage"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_edittext_chat"
+            android:hint="Nhập tin nhắn..."
+            android:imeOptions="actionSend"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/btnSend"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_circle_green"
+            android:contentDescription="Gửi"
+            android:padding="10dp"
+            android:src="@drawable/ic_send"
+            app:tint="@android:color/white" />
+    </LinearLayout>
+
+</LinearLayout>

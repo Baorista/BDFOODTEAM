@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "635872713467",
+    "firebase_url": "https://khoga-24996-default-rtdb.firebaseio.com",
+    "project_id": "khoga-24996",
+    "storage_bucket": "khoga-24996.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:635872713467:android:f696c5273c984ecc8e6e5e",
+        "android_client_info": {
+          "package_name": "com.example.khoga"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB77IDLEWGj3RdwU92aUxjZaDxYtZpE5bk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

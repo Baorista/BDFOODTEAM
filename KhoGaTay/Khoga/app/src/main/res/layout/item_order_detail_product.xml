@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- item_order_detail_product.xml — Sản phẩm trong chi tiết đơn -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingVertical="8dp">
+
+    <!-- Ảnh sản phẩm (nền tối bo góc theo Figma) -->
+    <ImageView
+        android:id="@+id/imgDetailProduct"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@drawable/bg_rounded_8dp_dark"
+        android:clipToOutline="true"
+        android:scaleType="centerCrop" />
+
+    <!-- Tên + giá -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvDetailProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="Tên sản phẩm"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvDetailProductPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="202.202đ"
+            android:textColor="#333333"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- Số lượng -->
+    <TextView
+        android:id="@+id/tvDetailQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x1"
+        android:textColor="#999999"
+        android:textSize="13sp" />
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- dialog_cancel_order.xml — Dialog lý do hủy đơn (theo Figma) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_rounded"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Header: Lý do hủy + nút X -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Lý do hủy"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnCloseDialog"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Đóng"
+            android:src="@drawable/ic_close"
+            app:tint="@color/text_hint" />
+    </RelativeLayout>
+
+    <!-- 3 lý do hủy -->
+    <RadioGroup
+        android:id="@+id/radioGroupReasons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioReason1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:paddingVertical="8dp"
+            android:text="Tôi mua nhầm sản phẩm"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radioReason2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="8dp"
+            android:text="Tôi tìm thấy sản phẩm khác giá rẻ hơn"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radioReason3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="8dp"
+            android:text="Khác"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <!-- Nút xác nhận hủy -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConfirmCancel"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/primary"
+        android:text="Xác nhận hủy"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        app:cornerRadius="8dp" />
+
+</LinearLayout>

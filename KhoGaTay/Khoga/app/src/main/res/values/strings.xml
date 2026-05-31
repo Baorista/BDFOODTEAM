@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BDfood</string>
+    <string name="title_home">Trang chủ</string>
+    <string name="title_search">Tìm kiếm</string>
+    <string name="title_cart">Giỏ hàng</string>
+    <string name="title_ai">AI</string>
+    <string name="title_profile">Hồ sơ</string>
+    <string name="hint_search">Tìm kiếm sản phẩm...</string>
+    <string name="label_sort_asc">Giá tăng dần</string>
+    <string name="label_sort_desc">Giá giảm dần</string>
+    <string name="label_all_category">Tất cả</string>
+    <string name="label_no_product">Không tìm thấy sản phẩm nào.</string>
+    <string name="btn_buy">Mua ngay</string>
+    <string name="btn_add_cart">Thêm vào giỏ hàng</string>
+    <string name="label_sold">Đã bán: </string>
+    <string name="label_stock">Còn lại: </string>
+    <string name="label_description">Mô tả sản phẩm</string>
+    <string name="label_reviews">Đánh giá sản phẩm</string>
+</resources>

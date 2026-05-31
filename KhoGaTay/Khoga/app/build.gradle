@@ -1,0 +1,80 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.example.khoga'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.example.khoga"
+        minSdk 24
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    // AndroidX core
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // Navigation Component
+    implementation 'androidx.navigation:navigation-fragment:2.7.7'
+    implementation 'androidx.navigation:navigation-ui:2.7.7'
+
+    // ViewModel + LiveData
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.7.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.7.0'
+
+    // RecyclerView + ViewPager2
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    // Firebase BOM - quản lý version tự động
+    implementation(platform("com.google.firebase:firebase-bom:34.11.0"))
+    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-storage'
+    implementation("com.google.firebase:firebase-analytics")
+    implementation 'com.google.firebase:firebase-auth'
+
+    // Glide - load ảnh từ URL Firebase Storage
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
+
+    // OkHttp (cho ZaloPay API)
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+
+    // Commons Codec (cho ZaloPay HMAC)
+    implementation 'commons-codec:commons-codec:1.15'
+
+    // CardView (dùng trong layout cart)
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    // Cloudinary - upload avatar
+    implementation 'com.cloudinary:cloudinary-android:2.3.1'
+
+    // Retrofit 2 + Gson (for Gemini API)
+    implementation 'com.squareup.retrofit2:retrofit:2.11.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.11.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'
+    
+    // Material Design 3
+    implementation 'com.google.android.material:material:1.12.0'
+}

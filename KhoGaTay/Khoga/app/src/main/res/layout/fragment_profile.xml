@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Tiêu đề -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hồ sơ"
+            android:textSize="22sp"
+            android:fontFamily="@font/nunito"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Avatar + tên + email -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="32dp">
+
+            <ImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="86dp"
+                android:layout_height="86dp"
+                android:background="@drawable/bg_circle_gray"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_profile" />
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đang tải..."
+                android:textSize="18sp"
+                android:fontFamily="@font/nunito"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/tvUserEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Menu items -->
+        <TextView
+            android:id="@+id/btnEditProfile"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_border_rounded"
+            android:text="Chỉnh sửa hồ sơ"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito"
+            android:textColor="@color/text_primary"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:layout_marginBottom="12dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/btnAddressBook"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_border_rounded"
+            android:text="Sổ địa chỉ"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito"
+            android:textColor="@color/text_primary"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:layout_marginBottom="12dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/btnOrderHistory"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_border_rounded"
+            android:text="Lịch sử mua hàng"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito"
+            android:textColor="@color/text_primary"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:layout_marginBottom="12dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/btnWishlist"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_border_rounded"
+            android:text="Sản phẩm yêu thích"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito"
+            android:textColor="@color/text_primary"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:layout_marginBottom="12dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/btnChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_border_rounded"
+            android:text="Đổi mật khẩu"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito"
+            android:textColor="@color/text_primary"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:layout_marginBottom="12dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_border_rounded"
+            android:text="Đăng xuất"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito"
+            android:textColor="@color/text_primary"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:layout_marginBottom="12dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+</ScrollView>
